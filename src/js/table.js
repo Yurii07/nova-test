@@ -44,13 +44,16 @@ class Table {
             }
 
             let submitBtn = document.getElementById("submit"),
-                tableAll = document.querySelector("table");
-            if (tableAll.classList.contains("error")) {
-                submitBtn.disabled = true;
-            } else {
-                submitBtn.disabled = false;
-            }
-            console.log(tableAll);
+                tableAllNode = document.querySelectorAll("table"),
+                tableAll = Array.prototype.slice.call(tableAllNode);
+
+            tableAll.some(function (item) {
+                if (tableAll.some(el => el.classList.contains('error'))) {
+                    submitBtn.disabled = true;
+                } else {
+                    submitBtn.disabled = false;
+                }
+            });
         }
     }
 
