@@ -1,0 +1,194 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+
+html {
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+  height: 100%;
+  @media screen and (max-width: $desktopWidth) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $tableWidth) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: 14px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+section, .section {
+  position: relative;
+  padding: 40px 0;
+  @media screen and (max-width: $desktopWidth) {
+    padding: 36px 0;
+  }
+  @media screen and (max-width: $desktopWidth) {
+    padding: 28px 0;
+  }
+  @media screen and (max-width: $desktopWidth) {
+    padding: 20px 0;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  flex: 0 0 auto;
+  position: relative;
+  margin: 0 auto;
+  max-width: $desktopWidth;
+  @media screen and (max-width: $smDesktopWidth) {
+    max-width: tableWidth;
+  }
+  @media screen and (max-width: $tableWidth) {
+    max-width: phoneWidth;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    max-width: smPhoneWidth;
+  }
+}
+
+//Main
+main {
+  #test {
+  }
+
+  .interactive-block {
+    margin-bottom: (2rem);
+
+    form {
+      #app {
+        display: flex;
+        justify-content: space-around;
+        padding: (1rem 0 3rem 0);
+
+        table {
+          position: relative;
+
+          &.error:after {
+            content: "Необходимо выбрать всего 5 позиций в карточке";
+            color: #F44336;
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            font-size: 12px;
+          }
+
+          &.error tbody {
+            border: 2px solid red;
+          }
+
+          tbody {
+            border: 1px solid black;
+          }
+
+          .line-through {
+            position: relative;
+
+            &:before,
+            &:after {
+              position: absolute;
+              left: 24px;
+              top: 11px;
+              content: ' ';
+              height: 33px;
+              width: 2px;
+              background-color: #333;
+            }
+
+            &:before {
+              transform: rotate(45deg);
+            }
+
+            &:after {
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+button {
+  display: flex;
+  margin: 0 auto;
+  border: 2px solid #2196F3;
+  background-color: white;
+  color: #2196F3;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:after {
+    //background-color: transparent;
+    color: inherit;
+    transition: all .25s;
+  }
+
+  &:hover {
+    background-color: #2196F3;
+    color: white;
+    transition: .5s;
+  }
+}
+
+
+.green {
+  background-color: green;
+}
+
+#play-again {
+  display: none;
+}
+
+
+// Modules
+// @import "modules/my-module.scss";
+@import "modules/header.scss";
+@import "modules/footer.scss";
+@import "modules/owl-carousel.scss";
