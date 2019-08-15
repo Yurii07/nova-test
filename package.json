@@ -5,7 +5,7 @@
   "homepage": "https://github.com/Yurii07/nova-test",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
     "build": "webpack --config ./build/webpack.build.conf.js"
   },
