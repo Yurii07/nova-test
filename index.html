@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Webpack</title>
+<link href="/assets/css/app.css" rel="stylesheet"></head>
+<body>
+
+<header>
+    <div class="navbar-fixed">
+        <nav class="nav-extended">
+            <div class="nav-wrapper ">
+                <a href="#" class="brand-logo">Logo</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">City<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+            <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="#!">City 1</a></li>
+                <li><a href="#!">City 2</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">City 3</a></li>
+            </ul>
+
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a class="active" href="#home">Home</a></li>
+                    <li class="tab"><a href="#news">News</a></li>
+                    <li class="tab"><a href="#aboutUs">About</a></li>
+                    <li class="tab disabled"><a href="#test3">Disabled Tab</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!--login modal-->
+
+</header>
+
+<main>
+
+    <div class="carousel carousel-slider center">
+        <div class="carousel-fixed-item center">
+            <a class="btn waves-effect white grey-text darken-text-2">button</a>
+        </div>
+        <div class="carousel-item" href="#one!">
+            <img src="/assets/img/agriculture-1845835_1920.jpg" alt="img1">
+            <div class="caption-text">
+                <h2>First Panel</h2>
+                <p class="white-text">This is your first panel</p>
+            </div>
+        </div>
+        <div class="carousel-item" href="#two!">
+            <div class="caption-text">
+                <h2>Second Panel</h2>
+                <p class="white-text">This is your second panel</p>
+            </div>
+            <img src="/assets/img/agriculture-4351266_1920.jpg" alt="img2">
+        </div>
+        <div class="carousel-item" href="#three!">
+            <div class="caption-text">
+                <h2>Third Panel</h2>
+                <p class="white-text">This is your third panel</p>
+            </div>
+            <img src="/assets/img/crystal-1685590_1920.jpg" alt="img3">
+        </div>
+        <div class="carousel-item" href="#four!">
+            <div class="caption-text">
+                <h2>Fourth Panel</h2>
+                <p class="white-text">This is your fourth panel</p>
+            </div>
+            <img src="/assets/img/hintersee-3601004_1920.jpg" alt="img4">
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Modal  -->
+        <div id="modal1" class="modal">
+            <div class="modal-content center-align">
+                <h4>Modal</h4>
+                <div id="random-number"></div>
+                <div class="modal-footer center-align">
+                    <a href="#!" class="modal-close" id="popup__close">
+                        <i class="material-icons ">clear</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--    <section class="anchors">-->
+        <!--        <div id="home" class="col s12">Home</div>-->
+        <!--        <div id="news" class="col s12">News</div>-->
+        <!--        <div id="test3" class="col s12">Test 3</div>-->
+        <!--        <div id="aboutUs" class="col s12">About</div>-->
+        <!--    </section>-->
+
+        <!-- Play game  -->
+        <div class="interactive-block">
+            <form id="formID">
+                <p class="center">Play game</p>
+                <div id="app"></div>
+                <div id="total-points"></div>
+                <div class="center-align">
+                    <button type="submit" id="submit" class="waves-effect waves-light btn-small" disabled>Submit
+                    </button>
+                    <button type="submit" id="play-again" class="waves-effect waves-light btn-small">Play Again</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</main>
+
+<!-- footer-->
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
+                    content.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text center">Links</h5>
+                <ul class="social list-inline ">
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <svg aria-hidden="true" data-prefix="fab" data-icon="facebook-f"
+                                 class="svg-inline--fa fa-facebook-f fa-w-9 social" xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 264 512">
+                                <path fill="currentColor"
+                                      d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <svg aria-hidden="true" data-prefix="fab" data-icon="google-plus-g"
+                                 class="svg-inline--fa fa-google-plus-g fa-w-20 social"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 640 512">
+                                <path fill="currentColor"
+                                      d="M386.061 228.496c1.834 9.692 3.143 19.384 3.143 31.956C389.204 370.205 315.599 448 204.8 448c-106.084 0-192-85.915-192-192s85.916-192 192-192c51.864 0 95.083 18.859 128.611 50.292l-52.126 50.03c-14.145-13.621-39.028-29.599-76.485-29.599-65.484 0-118.92 54.221-118.92 121.277 0 67.056 53.436 121.277 118.92 121.277 75.961 0 104.513-54.745 108.965-82.773H204.8v-66.009h181.261zm185.406 6.437V179.2h-56.001v55.733h-55.733v56.001h55.733v55.733h56.001v-55.733H627.2v-56.001h-55.733z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <svg aria-hidden="true" data-prefix="fab" data-icon="skype"
+                                 class="svg-inline--fa fa-skype fa-w-14 social" xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 448 512">
+                                <path fill="currentColor"
+                                      d="M424.7 299.8c2.9-14 4.7-28.9 4.7-43.8 0-113.5-91.9-205.3-205.3-205.3-14.9 0-29.7 1.7-43.8 4.7C161.3 40.7 137.7 32 112 32 50.2 32 0 82.2 0 144c0 25.7 8.7 49.3 23.3 68.2-2.9 14-4.7 28.9-4.7 43.8 0 113.5 91.9 205.3 205.3 205.3 14.9 0 29.7-1.7 43.8-4.7 19 14.6 42.6 23.3 68.2 23.3 61.8 0 112-50.2 112-112 .1-25.6-8.6-49.2-23.2-68.1zm-194.6 91.5c-65.6 0-120.5-29.2-120.5-65 0-16 9-30.6 29.5-30.6 31.2 0 34.1 44.9 88.1 44.9 25.7 0 42.3-11.4 42.3-26.3 0-18.7-16-21.6-42-28-62.5-15.4-117.8-22-117.8-87.2 0-59.2 58.6-81.1 109.1-81.1 55.1 0 110.8 21.9 110.8 55.4 0 16.9-11.4 31.8-30.3 31.8-28.3 0-29.2-33.5-75-33.5-25.7 0-42 7-42 22.5 0 19.8 20.8 21.8 69.1 33 41.4 9.3 90.7 26.8 90.7 77.6 0 59.1-57.1 86.5-112 86.5z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="/assets/js/app.js"></script></body>
+</html>
