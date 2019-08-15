@@ -1,119 +1,51 @@
-// header style
-.header-wrap {
-  background-color: #4b636e;
-  display: flex;
-  justify-content: space-around;
-}
+// header
+header {
+  .navbar-fixed {
+    height: 110px;
 
-.navigation-wrap {
-  background-color: #78909c;
-  .header-city{
-    select {
-
+    .nav-wrapper {
+      background-color: $header-color;
     }
-  }
-  .nav {
-    ul {
-      display: flex;
-      justify-content: space-around;
 
-      li {
-        padding: (.7rem);
-        margin-bottom: (.1rem);
+    .nav-content {
+      background-color: #78909c;
 
-        a {
-          display: inline-block;
-          color: #000;
-          text-decoration: none;
+      .tabs {
+        display: flex;
+        justify-content: space-around;
 
-          &:after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 2px;
-            background: #000;
-            transition: width .3s;
-          }
+        .tab {
+          a {
+            display: inline-block;
+            color: #000;
+            text-decoration: none;
 
-          &:hover::after {
-            width: 100%;
-            transition: width .3s;
+            &:after {
+              content: '';
+              display: block;
+              width: 0;
+              height: 2px;
+              background: #000;
+              transition: width .3s;
+            }
+
+            &:hover::after {
+              width: 100%;
+              transition: width .3s;
+            }
+
+            &:focus {
+              background-color: #4b636e;
+              outline: none;
+
+              &.active {
+                background-color: #4b636e;
+                outline: none;
+              }
+            }
           }
         }
       }
-    }
-  }
-}
-
-.box {
-position: relative;
-  select {
-    background-color: #4b636e;
-    color: white;
-    padding: 12px;
-    width: 250px;
-    border: none;
-    font-size: 20px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-    -webkit-appearance: button;
-    appearance: button;
-    outline: none;
-    option {
-      padding: 30px;
-    }
-  }
-  &::before {
-    content: "^";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 20%;
-    height: 100%;
-    text-align: center;
-    font-size: 28px;
-    line-height: 45px;
-    color: rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.1);
-    pointer-events: none;
-  }
-  &:hover::before {
-    color: rgba(255, 255, 255, 0.6);
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-}
-
-/*modal*/
-.modal {
-  width: 100vw;
-  height: 100vh;
-  max-height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  top: 0;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9;
-
-  .modal-content {
-    width: 500px;
-    background: #fafafa;
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
-    position: relative;
-    padding: 20px;
-
-    .modal-footer {
-      width: auto;
-      text-decoration: none;
-      line-height: 1;
-      color: inherit;
-      font-size: 1.2em;
-      padding: 0.3em;
-      position: absolute;
-      right: 10px;
-      top: 10px;
     }
   }
 }

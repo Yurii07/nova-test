@@ -93,9 +93,43 @@ section, .section {
 }
 
 //Main
-main {
-  #test {
+/*modal*/
+.modal {
+  width: 100vw;
+  height: 100vh;
+  max-height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+
+  .modal-content {
+    width: 500px;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+    padding: 20px;
+
+    .modal-footer {
+      width: auto;
+      text-decoration: none;
+      line-height: 1;
+      color: inherit;
+      font-size: 1.2em;
+      padding: 0.3em;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
   }
+}
+
+main {
 
   .interactive-block {
     margin-bottom: (2rem);
@@ -104,10 +138,11 @@ main {
       #app {
         display: flex;
         justify-content: space-around;
-        padding: (1rem 0 3rem 0);
+        padding: (1rem 0);
 
         table {
           position: relative;
+          margin-right: 10px;
 
           &.error:after {
             content: "Необходимо выбрать всего 5 позиций в карточке";
@@ -132,7 +167,7 @@ main {
             &:before,
             &:after {
               position: absolute;
-              left: 24px;
+              left: 30px;
               top: 11px;
               content: ' ';
               height: 33px;
@@ -154,30 +189,6 @@ main {
   }
 }
 
-button {
-  display: flex;
-  margin: 0 auto;
-  border: 2px solid #2196F3;
-  background-color: white;
-  color: #2196F3;
-  padding: 10px 30px;
-  font-size: 16px;
-  cursor: pointer;
-
-  &:after {
-    //background-color: transparent;
-    color: inherit;
-    transition: all .25s;
-  }
-
-  &:hover {
-    background-color: #2196F3;
-    color: white;
-    transition: .5s;
-  }
-}
-
-
 .green {
   background-color: green;
 }
@@ -187,8 +198,18 @@ button {
 }
 
 
+@media (max-width: $smDesktopWidth) {
+  #app {
+    flex-wrap: wrap;
+
+    table {
+      margin-bottom: 10px;
+    }
+  }
+}
+
 // Modules
 // @import "modules/my-module.scss";
 @import "modules/header.scss";
 @import "modules/footer.scss";
-@import "modules/owl-carousel.scss";
+@import "modules/carousel";
