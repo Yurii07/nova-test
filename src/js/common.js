@@ -14,7 +14,7 @@ btnSubmit.addEventListener('click', function (evt) {
     table.countBall();
 
     btnSubmit.style.display = "none";
-    btnPlayAgain.style.display = "block";
+    btnPlayAgain.style.display = "inline-block";
 });
 
 btnPlayAgain.addEventListener('click', function (evt) {
