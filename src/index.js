@@ -8,7 +8,7 @@ import './js/common'
 // Vue.use();
 // window.Vue = require('vue');
 
-import 'owl.carousel/dist/assets/owl.carousel.min.css';
+// import 'owl.carousel/dist/assets/owl.carousel.min.css';
 
 import 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/js/materialize.min.js';
