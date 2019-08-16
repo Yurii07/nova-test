@@ -15,6 +15,10 @@ import 'materialize-css/dist/js/materialize.min.js';
 
 import './scss/main.scss'
 
+import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;
+
 $(document).ready(function(){
     $(".dropdown-trigger").dropdown(); //activate dropdown list
     $('ul.tabs').tabs(); // dropdown nav
