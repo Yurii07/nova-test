@@ -24,7 +24,7 @@ module.exports = {
     output: {
         filename: `${PATHS.assets}js/[name].js`,
         path: PATHS.dist,
-        publicPath: '/'  // public path
+        publicPath: '/'  // public path add . dot - npm run build - npm run deploy & return settings
     },
     module: {
         rules: [{
